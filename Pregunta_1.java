@@ -16,4 +16,20 @@ public class Pregunta_1 {
         }
         System.out.println("------------------------------------");
     }
+
+    public static void BurbujaEdad(Mascota[] mascotas) {
+        int n = mascotas.length;
+        for (int i = 0; i < n; i++) {
+            boolean flag = false;
+            for (int j = 0; j < n - 1 - i; j++) {
+                if (mascotas[j].getEdad() > mascotas[j + 1].getEdad()) {
+                    Mascota temp = mascotas[j];
+                    mascotas[j] = mascotas[j + 1];
+                    mascotas[j + 1] = temp;
+                    flag = true;
+                }
+            }
+            if (!flag) break;
+        }
+    }
 }
