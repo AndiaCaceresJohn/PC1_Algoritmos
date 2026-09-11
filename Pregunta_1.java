@@ -49,4 +49,17 @@ public class Pregunta_1 {
             }
         }
     }
+
+    public static void InsercionDueno(Mascota[] mascotas) {
+        int n = mascotas.length;
+        for (int i = 1; i < n; i++) {
+            Mascota clave = mascotas[i];
+            int j = i - 1;
+            while (j >= 0 && mascotas[j].getDueno().compareToIgnoreCase(clave.getDueno()) > 0) {
+                mascotas[j + 1] = mascotas[j];
+                j = j - 1;
+            }
+            mascotas[j + 1] = clave;
+        }
+    }
 }
