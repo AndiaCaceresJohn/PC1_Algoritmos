@@ -62,4 +62,22 @@ public class Pregunta_1 {
             mascotas[j + 1] = clave;
         }
     }
+
+    public static void main(String[] args) {
+        System.out.println("LISTA INICIAL:");
+        Mascota[] lista = CrearMascotas();
+        ImprimirMascotas(lista);
+
+        System.out.println("ORDENADO POR EDAD (BURBUJA):");
+        BurbujaEdad(lista);
+        ImprimirMascotas(lista);
+
+        System.out.println("ORDENADO POR NOMBRE (SELECCION):");
+        SeleccionNombre(lista);
+        ImprimirMascotas(lista);
+
+        System.out.println("ORDENADO POR DUENO (INSERCION):");
+        InsercionDueno(lista);
+        ImprimirMascotas(lista);
+    }
 }
