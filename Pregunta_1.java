@@ -9,4 +9,11 @@ public class Pregunta_1 {
             new Mascota("Toby", 4, "Juan")
         };
     }
+
+    public static void ImprimirMascotas(Mascota[] mascotas) {
+        for (Mascota m : mascotas) {
+            System.out.println(m);
+        }
+        System.out.println("------------------------------------");
+    }
 }
