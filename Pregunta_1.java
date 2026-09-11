@@ -32,4 +32,21 @@ public class Pregunta_1 {
             if (!flag) break;
         }
     }
+
+    public static void SeleccionNombre(Mascota[] mascotas) {
+        int n = mascotas.length;
+        for (int i = 0; i < n - 1; i++) {
+            int indexMin = i;
+            for (int j = i + 1; j < n; j++) {
+                if (mascotas[j].getNombre().compareToIgnoreCase(mascotas[indexMin].getNombre()) < 0) {
+                    indexMin = j;
+                }
+            }
+            if (indexMin != i) {
+                Mascota temp = mascotas[i];
+                mascotas[i] = mascotas[indexMin];
+                mascotas[indexMin] = temp;
+            }
+        }
+    }
 }
